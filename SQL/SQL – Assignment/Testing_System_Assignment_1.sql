@@ -6,9 +6,9 @@ CREATE TABLE Department(
     RepartmentName VARCHAR(50)
     
 );
-cREATE TABLE `Position` (
+CREATE TABLE `Position` (
     PositionID INT AUTO_INCREMENT PRIMARY KEY,
-    PositionName VARCHAR(50)
+    PositionName ENUM ('Dev', 'Test', 'Scrum Master',' PM')
 );
 CREATE TABLE `Account`(
 AccountID INT AUTO_INCREMENT PRIMARY KEY,
@@ -36,7 +36,7 @@ CREATE TABLE GroupAccount (
 );
 CREATE TABLE TypeQuestion (
 TypeID INT AUTO_INCREMENT PRIMARY KEY,
-TypeName VARCHAR(50)
+TypeName ENUM('Essay', 'Multiple-Choice')
 );
 CREATE TABLE CategoryQuestion (
     CategoryID INT AUTO_INCREMENT PRIMARY KEY,
