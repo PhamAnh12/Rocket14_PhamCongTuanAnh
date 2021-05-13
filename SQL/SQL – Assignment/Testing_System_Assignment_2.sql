@@ -82,7 +82,7 @@ CREATE TABLE Answer(
     Answers					INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     Content					VARCHAR(255) NOT NULL,
     QuestionID				INT UNSIGNED NOT NULL,
-    isCorrect				BOOLEAN DEFAULT 1,
+    isCorrect				BIT DEFAULT 1,
     FOREIGN KEY(QuestionID) REFERENCES Question(QuestionID)
 );
 
