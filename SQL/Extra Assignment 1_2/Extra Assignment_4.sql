@@ -72,23 +72,28 @@ VALUE								( 	1,				'Java'		, '2021-03-15'		),
    
 -- Question 3: Viết lệnh để lấy ra danh sách nhân viên (name) có skill Java
 SELECT et.Employee_Name,es.Date_Registered
-FROM Employee_Skill_Table es
-LEFT JOIN Employee_Table et ON es.Employee_Number = et.Employee_Number
+FROM Employee_Table et
+LEFT JOIN Employee_Skill_Table es ON et.Employee_Number = es.Employee_Number
 WHERE es.Skill_Code = 'Java';
--- Question 4: Viết lệnh để lấy ra danh sách các phòng ban có >3 nhân viên
+-- Question 4: Viết lệnh để lấy ra danh sách các phòng ban có >2 nhân viên
 SELECT d.Department_Name, count(et.Employee_Number) AS 'So Luong'
-FROM department d INNER JOIN employee_table et 
+FROM department d 
+LEFT JOIN employee_table et 
 ON d.Department_Number = et.Department_Number
 GROUP BY d.Department_Number
+HAVING  count(et.Employee_Number)> 2
 ORDER BY count(et.Employee_Number);
+
  -- Question 5: Viết lệnh để lấy ra danh sách nhân viên của mỗi văn phòng ban
 SELECT et.*,d.Department_Name
-FROM department d INNER JOIN employee_table et 
-ON d.Department_Number = et.Department_Number
+FROM employee_table et 
+LEFT JOIN  department d
+ON et.Department_Number = d.Department_Number
 ORDER BY d.Department_Number;
 -- Question 6: Viết lệnh để lấy ra danh sách nhân viên có > 1 skills.
 SELECT et.*, count(es.Skill_Code)
-FROM employee_table et INNER JOIN employee_skill_table es
+FROM employee_table et 
+INNER JOIN employee_skill_table es
 ON  et.Employee_Number = es.Employee_Number
 GROUP BY  et.Employee_Number 
 HAVING count(es.Skill_Code) > 1
