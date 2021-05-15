@@ -15,7 +15,10 @@ VALUE 				('Nguyễn Hải An '	,  '2000-02-29'	, 'male'	,	20	,	20		,	20			,		'V
                     
 -- Question 2: Viết lệnh để lấy ra tất cả các thực tập sinh đã vượt qua bài test đầu vào, 
 -- nhóm chúng thành các tháng sinh khác nhau
-SELECT * FROM Trainee;
+SELECT *, MONTH(Birth_Date) AS Month_Of_Birth_Date FROM Trainee
+WHERE ET_IQ + ET_Gmath>=20 AND ET_IQ>=8 AND ET_Gmath>=8 AND ET_English >= 18
+ORDER BY Month_Of_Birth_Date ASC;
+
 -- Question 3: Viết lệnh để lấy ra thực tập sinh có tên dài nhất, lấy ra các thông tin sau:
 -- tên, tuổi, các thông tin cơ bản (như đã được định nghĩa trong table)
 SELECT * 

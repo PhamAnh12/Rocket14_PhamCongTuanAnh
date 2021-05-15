@@ -43,15 +43,22 @@ GROUP BY DepartmentID;
 -- Question 11: Lấy ra nhân viên có tên bắt đầu bằng chữ "D" và kết thúc bằng chữ "o"
 SELECT *
 FROM `account`
-WHERE FullName LIKE "%D%_%o";
+WHERE FullName LIKE "D%o";   
 -- Question 12: Xóa tất cả các exam được tạo trước ngày 20/12/2019
 DELETE FROM ExamQuestion 
 WHERE ExamID = ( SELECT ExamID  FROM Exam WHERE CreateDate < '2019-12-20');
 DELETE FROM Exam
 WHERE CreateDate < '2019-12-20';
 -- Question 13: Xóa tất cả các question có nội dung bắt đầu bằng từ "câu hỏi"
+DELETE FROM answer
+WHERE QuestionID IN (SELECT QuestionID FROM question WHERE  Content LIKE 'Câu Hỏi%');
+
+DELETE FROM examquestion
+WHERE QuestionID IN (SELECT QuestionID FROM question WHERE  Content LIKE 'Câu Hỏi%');
+
 DELETE FROM Question 
-WHERE Content LIKE "%câu hỏi%";
+WHERE Content LIKE 'câu hỏi%';
+
 -- Question 14: Update thông tin của account có id = 5 thành tên "Nguyễn Bá Lộc" và email thành loc.nguyenba@vti.com.vn
 UPDATE `account`
 SET FullName = "Nguyễn Bá Lộc",email = "loc.nguyenba@vti.com.vn"
