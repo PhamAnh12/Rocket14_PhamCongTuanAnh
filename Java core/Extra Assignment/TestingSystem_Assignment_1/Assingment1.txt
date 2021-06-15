@@ -1,0 +1,42 @@
+ - Sinh vên (
+   +) Thuộc tính
+    + MSSV  
+    + tên 
+    + Ngày sinh 
+    + email
+    + quên quán
+    + hệ của sinh viên
+  +)Phương thức
+      + Đăng ký học
+      + Xem điểm thi
+      
+
+);
+- thầy cô ( 
+   +)Thuộc tính
+     +MSGV
+     +tên 
+     +tuổi
+     + Email
+     + SDT
+     + Lương
+  +)Phương thức
+    + nhập điểm 
+    + xem danh sách lớp
+    + Thêm sửa xoá sinh viên 
+    + Lương
+);
+- Lớp học(
+   +) Thuộc tính
+    + MLH
+    + tên lớp
+    + môn học
+    + thời gian học
+    + SLSV
+    + GVD
+    + Số tín chỉ 
+    + Phòng học
+  +) Thuộc tính
+    + mở lớp học
+    + Cho Thuê
+);

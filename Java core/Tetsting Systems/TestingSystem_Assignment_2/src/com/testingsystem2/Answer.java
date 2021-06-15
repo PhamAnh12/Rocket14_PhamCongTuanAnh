@@ -1,0 +1,8 @@
+package com.testingsystem2;
+
+public class Answer {
+    public int id;
+    public String content;
+    public Question question;
+    public Boolean isCorrect;
+}
