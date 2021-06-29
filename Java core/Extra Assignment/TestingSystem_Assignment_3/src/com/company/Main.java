@@ -13,7 +13,14 @@ public class Main {
 //        exer1.Question5();
         Exercise2 exer2 = new Exercise2();
 //        exer2.Question1();
+//        exer2.Question2();
+//        exer2.Question3();
+//        exer2.Qusetion4();
+//        exer2.Question5();
+//        exer2.Question6();
+        exer2.Question7();
         Exercise3 exer3 = new Exercise3();
-        exer3.Question1();
+
+//        exer3.Question1();
     }
 }

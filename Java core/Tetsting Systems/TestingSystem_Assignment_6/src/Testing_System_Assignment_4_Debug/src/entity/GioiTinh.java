@@ -1,0 +1,5 @@
+package Testing_System_Assignment_4_Debug.src.entity;
+
+public enum GioiTinh {
+	NAM, NU, KHONGBIET;
+}

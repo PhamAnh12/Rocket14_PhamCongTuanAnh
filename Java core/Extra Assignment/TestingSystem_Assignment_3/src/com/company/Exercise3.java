@@ -1,115 +1,214 @@
 package com.company;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Stack;
 
 public class Exercise3 {
-    public static void inradaynguyen(int[] arr) {
+    public int[] taogiai() {
+        Random rd = new Random();
+        int[] taogiai = {rd.nextInt(9), rd.nextInt(9), rd.nextInt(9), rd.nextInt(9), rd.nextInt(9)};
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
+        return taogiai;
+    }
+
+    public int[] taogiaibay() {
+        Random rd = new Random();
+        int[] taogiaibay = {rd.nextInt(9), rd.nextInt(9)};
+        return taogiaibay;
+    }
+
+    public int[][] sinhracacgiai() {
+        int[] gdacbiet = taogiai();
+        int[] gnhat = taogiai();
+        int[] gnhi1 = taogiai();
+        int[] gnhi2 = taogiai();
+        int[] gba1 = taogiai();
+        int[] gba2 = taogiai();
+        int[] gba3 = taogiai();
+        int[] gba4 = taogiai();
+        int[] gba5 = taogiai();
+        int[] gba6 = taogiai();
+        int[] gtu1 = taogiai();
+        int[] gtu2 = taogiai();
+        int[] gtu3 = taogiai();
+        int[] gtu4 = taogiai();
+        int[] gnam1 = taogiai();
+        int[] gnam2 = taogiai();
+        int[] gnam3 = taogiai();
+        int[] gnam4 = taogiai();
+        int[] gnam5 = taogiai();
+        int[] gnam6 = taogiai();
+        int[] gsau1 = taogiai();
+        int[] gsau2 = taogiai();
+        int[] gsau3 = taogiai();
+        int[] gbay1 = taogiaibay();
+        int[] gbay2 = taogiaibay();
+        int[] gbay3 = taogiaibay();
+        int[] gbay4 = taogiaibay();
+        int[][] arrg = {gdacbiet, gnhat, gnhi1, gnhi2, gba1, gba2, gba3, gba4, gba5, gba6, gtu1, gtu2, gtu3, gtu4, gnam1, gnam2, gnam3, gnam4, gnam5, gnam6, gsau1, gsau2, gsau3, gbay1, gbay2, gbay3, gbay4};
+        return arrg;
+    }
+
+    public void inracacgiai(int[][] arr) {
+        System.out.println("Số trúng giải đặc biệt: ");
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
         }
+        System.out.println();
+        System.out.println("Số trúng giải nhất: ");
+        for (int i = 1; i <= 1; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải nhì: ");
+        for (int i = 2; i <= 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải ba: ");
+        for (int i = 4; i <= 8; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải tư: ");
+        for (int i = 9; i <= 12; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải năm: ");
+        for (int i = 13; i <= 18; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải sáu: ");
+        for (int i = 19; i <= 21; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+
+        }
+        System.out.println();
+        System.out.println("Các số trúng giải bảy: ");
+        for (int i = 22; i <= 25; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.print("  ");
+
+        }
+        System.out.println();
 
     }
-//    Hãy thiết kế giao diện console trong Java để thực hiện chương trình
-//quay sổ xố.
-//Kết quả đề bằng 2 số cuối của giải đặc biệt.
-//Kết quả lô bằng 2 số cuối của tất cả các giải.
-//Nếu trúng đề. tiền thắng = tiền cược*70 .
-//Nếu trúng lô. tiền thắng = (tiền cược/23)*80*số lần giải về.
-    public  void Question1(){
-        System.out.println("Exercise3 Question1: ");
-         Random rd = new Random();
-        int [] gdacbiet = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnhat = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnhi1 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnhi2 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba1 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba2 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba3 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba4 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba5 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gba6 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gtu1 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gtu2 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gtu3 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gtu4 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam1 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam2 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam3 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam4 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam5 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gnam6 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gsau1 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gsau2 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gsau3 = {rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9),rd.nextInt(9)};
-        int [] gbay1 = {rd.nextInt(9),rd.nextInt(9)};
-        int [] gbay2 = {rd.nextInt(9),rd.nextInt(9)};
-        int [] gbay3 = {rd.nextInt(9),rd.nextInt(9)};
-        int [] gbay4 = {rd.nextInt(9),rd.nextInt(9)};
+
+    public void inra2socuoigiai(int[][] arr) {
+        System.out.println("Hai số cuối  của  giải đặc biệt: ");
+        if ((arr[0][3] * 10 + arr[0][4]) < 10) {
+            System.out.print("0" + (arr[0][3] * 10 + arr[0][4]));
+        } else {
+            System.out.print((arr[0][3] * 10 + arr[0][4]));
+        }
+        System.out.println();
+        System.out.println("Hai số cuối  của các giải khác: ");
+        for (int i = 1; i < 22; i++) {
+            if ((arr[i][3] * 10 + arr[i][4]) < 10) {
+                System.out.print("0" + (arr[i][3] * 10 + arr[i][4]) + " ");
+            } else {
+                System.out.print((arr[i][3] * 10 + arr[i][4]) + " ");
+            }
+        }
+
+        for (int i = 22; i < 26; i++) {
+            if ((arr[i][0] * 10 + arr[i][1]) < 10) {
+                System.out.print("0" + (arr[i][0] * 10 + arr[i][1]) + " ");
+            } else {
+                System.out.print((arr[i][0] * 10 + arr[i][1]) + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    public void Question1() {
+        int[][] arrg = sinhracacgiai();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập số hai chữ số: ");
+        System.out.println("Nhập số hai chữ số  (00 đến 99): ");
         int x = sc.nextInt();
         System.out.println("Nhập số  tiền cược đơn vị (nghìn): ");
         int tiencuoc = sc.nextInt();
-        int tienthang = 0;
-        int count = 0;
-        int [] a = new int[2];
-        a[1] = x%10;
-        a[0] = (x-x%10)/10;
-        int [] arr = new int[26];
-//        các số trúng giải nhất
-        arr[0] = gnhat[3]*10 + gnhat[4];
-        //        các số trúng giải nhì
-        arr[1] = gnhi1[3]*10 + gnhi1[4]; arr[2] =  gnhi2[3]*10 + gnhi2[4];
-        //        các số trúng giải ba
-        arr[3] = gba1[3]*10 + gba1[4]; arr[4] = gba2[3]*10 + gba2[4]; arr[5] = gba3[3]*10 + gba3[4];
-        arr[6] = gba4[3]*10 + gba4[4];arr[7] = gba5[3]*10 + gba5[4]; arr[8] = gba6[3]*10 + gba6[4];
-        //        các số trúng giải tư
-        arr[9] = gtu1[3]*10 + gtu1[4];  arr[10] = gtu2[3]*10 + gtu2[4];  arr[11] = gtu3[3]*10 + gtu3[4];
-        arr[12] = gtu4[3]*10 + gtu4[4];
-        //        các số trúng giải năm
-        arr[13] = gnam1[3]%10 + gnam1[4]; arr[14] = gnam2[3]%10 + gnam2[4];arr[15] = gnam3[3]%10 + gnam3[4];
-        arr[16] = gnam4[3]%10 + gnam4[4];arr[17] = gnam5[3]%10 + gnam5[4];arr[18] = gnam6[3]%10 + gnam6[4];
-        //        các số trúng giải sáu
-        arr[19] = gsau1[3]%10 + gsau1[4];  arr[20] = gsau2[3]%10 + gsau2[4];arr[21] = gsau3[3]%10 + gsau3[4];
-        //        các số trúng giải sáu
-        arr[22] = gbay1[0]*10 + gbay1[1];arr[23] = gbay2[0]*10 + gbay2[1];arr[24] = gbay3[0]*10 + gbay3[1];
-        arr[25] = gbay4[0]*10 + gbay4[1];
-        System.out.println("Số trúng giải đặc biệt: ");
-        inradaynguyen(gdacbiet);
-        System.out.println();
-        System.out.println("Hai số cuối trúng giải: ");
-        for (int i = 0; i < 26; i++) {
-            if(arr[i] >= 10 ) {
-                System.out.print(arr[i] + " ");
-            }
-            else {
-                System.out.print( "0" + arr[i] + " ");
-            }
+        int tienthang = 0, countde = 0, countlo = 0;
+        System.out.println("Mời bạn lựa chọn đánh: ");
+        System.out.println("1.Đánh đề: ");
+        System.out.println("2.Đánh lô: ");
+        int number = sc.nextInt();
+        while (number != 1 && number != 2) {
+            System.out.println("Vui lòng chọn lại bạn muốn 1.Đánh lô hay 2.Đánh đề: ");
+            number = sc.nextInt();
         }
-        System.out.println();
-// Trúng giải đặc biệt
-        if(a[0] == gdacbiet[3] && a[1] == gdacbiet[4]){
-            tienthang = tiencuoc*70;
-            inradaynguyen(gdacbiet);
-            System.out.println("Số tiền bạn nhận được là(nghìn): " + tienthang + " nghìn");
+        sc.close();
+        if (number == 1) {
+            System.out.println("Bạn chọn đánh đề. ");
+        } else if (number == 2) {
+            System.out.println("Bạn chọn đánh lô. ");
         }
-        else {
-            for (int i = 0; i < 26; i++) {
-                if(x == arr[i]){
-                    count++;
+        Date date = new Date();
+        System.out.println("Thời gian quay thưởng:  " + date);
+        inracacgiai(arrg);
+        inra2socuoigiai(arrg);
+        switch (number) {
+            case 1: {
+                if (x == ((arrg[0][3] * 10 + arrg[0][4]))) {
+                    System.out.println("Xin chúc mừng bạn đã trúng đề ");
+                    tienthang = tiencuoc * 70;
+                    System.out.println("Số bạn đã chọn là:  " + x);
+                    System.out.println("Số tiền bạn nhận được là(nghìn): " + tienthang + ".000");
+                    countde = 1;
                 }
+                break;
             }
-
+            case 2: {
+                for (int i = 1; i < 22; i++) {
+                    if (x == (arrg[i][3] * 10 + arrg[i][4])) {
+                        countlo++;
+                    }
+                }
+                for (int i = 22; i < 26; i++) {
+                    if (x == (arrg[i][0] * 10 + arrg[i][1])) {
+                        countlo++;
+                    }
+                }
+                if (countlo > 0) {
+                    System.out.println("Xin chúc mừng bạn đã trúng lô ");
+                    System.out.println("Số bạn đã chọn là: " + x);
+                    tienthang = (tiencuoc * 80 * countlo) / 23;
+                    System.out.println("Số tiền bạn nhận được là (nghìn): " + tienthang + ".000");
+                }
+                break;
+            }
         }
-        if(count > 0){
-            tienthang = tiencuoc*80*count/23;
-            System.out.println("Số tiền bạn nhận được là( nghìn): " + tienthang + " nghìn");
-        }
-        else  {
+        if (countde == 0 && countlo == 0) {
+            System.out.println("Số bạn đã chọn là: " + x);
             System.out.println("Rất tiếc bạn không trúng giải");
         }
+
     }
 }
